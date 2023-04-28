@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /Projets_Git/PiePHP/PiePHP
+RewriteCond %{REQUEST_FILENAME} !-f [OR]
+RewriteCond %{REQUEST_URI} !^/Projets_Git/PiePHP/PiePHP/(webroot/.+|index.php|robots.txt)$
+RewriteRule ^ index.php [QSA,L]

@@ -28,7 +28,7 @@ class Core
 {
     public function run()
     {
-        $BaseUrl = '/EPITECH/PiePHP/PiePHP';
+        $BaseUrl = '/Projets_Git/PiePHP/PiePHP';
 
         $url = ucfirst(strtolower(str_replace($BaseUrl, '', $_SERVER['REQUEST_URI'])));
 

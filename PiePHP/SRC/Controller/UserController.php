@@ -24,7 +24,7 @@ class UserController extends Controller
         // Appeler la méthode save() du modèle pour enregistrer les données dans la base de données
         $userModel->Create();
 
-        header('Location: /EPITECH/PiePHP/PiePHP/user/login');
+        header('Location: /Projets_Git/PiePHP/PiePHP/user/login');
     }
 
     function login()
@@ -51,7 +51,7 @@ class UserController extends Controller
             echo "
                 <script>
                     alert('✅ Connexion Validée ! ✅');
-                    window.location.href='/EPITECH/PiePHP/PiePHP/app/index';
+                    window.location.href='/Projets_Git/PiePHP/PiePHP/app/index';
                 </script>
             ";
         } else {
@@ -73,7 +73,7 @@ class UserController extends Controller
         $userModel = new UserModel(array('email' => $email, 'password' => $password));
         $userModel->Update($_SESSION['id']);
 
-        header('Location: /EPITECH/PiePHP/PiePHP/user/RenderInfosUtilisateur');
+        header('Location: /Projets_Git/PiePHP/PiePHP/user/RenderInfosUtilisateur');
     }
 
     function RenderUpdate()
@@ -93,7 +93,7 @@ class UserController extends Controller
         $userModel = new UserModel();
         $userModel->Delete($_SESSION['id']);
 
-        header('Location: /EPITECH/PiePHP/PiePHP/user/login');
+        header('Location: /Projets_Git/PiePHP/PiePHP/user/login');
     }
 
     function RenderInfosTousUtilisateurs()
@@ -128,6 +128,6 @@ class UserController extends Controller
     {
         session_start();
         session_destroy();
-        header('Location: /EPITECH/PiePHP/PiePHP/user/login');
+        header('Location: /Projets_Git/PiePHP/PiePHP/user/login');
     }
 }
